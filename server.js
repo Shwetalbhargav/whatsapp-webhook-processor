@@ -16,6 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 connectDB();
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('Hello from my WhatsApp webhook processor!');
+});
 app.use('/payload', payloadRoutes);
 app.use('/messages', messageRoutes);
 
