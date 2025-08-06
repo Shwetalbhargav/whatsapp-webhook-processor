@@ -5,7 +5,9 @@ const connectDB = require('./config/db');
 const payloadRoutes = require('./route/payloadRoutes');
 const messageRoutes   = require('./route/messageRoutes');
 const path = require('path');
+const cors = require('cors');
 
+app.use(cors({origin: 'https://whatsapp-webclone-ojegw754f-shwetals-projects.vercel.app'  }));
 
 const app = express();
 app.use(express.json());
