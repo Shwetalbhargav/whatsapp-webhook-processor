@@ -9,7 +9,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors({origin: 'https://whatsapp-webclone-m898e8ynh-shwetals-projects.vercel.app/'  }));
+app.use(cors({origin: 'https://whatsapp-webclone-nl74m7yed-shwetals-projects.vercel.app//'  }));
 
 
 app.use(express.json());
