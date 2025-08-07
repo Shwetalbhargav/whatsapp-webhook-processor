@@ -95,3 +95,15 @@ exports.createDemoMessage = async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 };
+
+
+exports.getMessagesByWaId = async (req, res, next) => {
+  try {
+    const msgs = await ProcessedMessage
+      .find({ waId: req.params.waId })
+      .sort({ timestamp: 1 });
+    res.json(msgs);
+  } catch (err) {
+    next(err);
+  }
+};

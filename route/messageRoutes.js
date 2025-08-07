@@ -1,11 +1,12 @@
-// route/messageRoutes.js
+// routes/messageRoutes.js
 const express = require('express');
 const router  = express.Router();
 const {
   getAllMessages,
   getMessageById,
   updateMessageStatus,
-  createDemoMessage
+  createDemoMessage,
+  getMessagesByWaId,         
 } = require('../controller/messageController');
 
 // GET /messages
@@ -17,7 +18,10 @@ router.get('/:id', getMessageById);
 // PATCH /messages/:id/status
 router.patch('/:id/status', updateMessageStatus);
 
-// POST /messages       ← “demo” outbound‐style message
+// POST /messages       
 router.post('/', createDemoMessage);
+
+// GET /messages/waId/:waId 
+router.get('/waId/:waId', getMessagesByWaId);
 
 module.exports = router;
