@@ -7,9 +7,11 @@ const messageRoutes   = require('./route/messageRoutes');
 const path = require('path');
 const cors = require('cors');
 
-app.use(cors({origin: 'https://whatsapp-webclone-ojegw754f-shwetals-projects.vercel.app'  }));
-
 const app = express();
+
+app.use(cors({origin: 'https://whatsapp-webclone-m898e8ynh-shwetals-projects.vercel.app/'  }));
+
+
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
