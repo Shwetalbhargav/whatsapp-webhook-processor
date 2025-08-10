@@ -42,9 +42,9 @@ app.get('/', (req, res) =>
 );
 
 // Mount your routes
-app.use('/payload',      payloadRoutes);       // GET /payload/process  (or POST / if you add it)
-app.use('/messages',     messageRoutes);       // GET /messages, /:id, /waId/:waId, POST, PATCH
-app.use('/conversations',conversationRoutes);  // GET /conversations
+app.use('/payload',      payloadRoutes);       
+app.use('/messages',     messageRoutes);      
+app.use('/conversations',conversationRoutes); 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
